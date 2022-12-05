@@ -27,4 +27,18 @@ let shopItemsData = [
         desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
         img: "Imagens/Amazônia.jpg",
     },
+    {
+        id: "thyfhcbcv",
+        name: "Mens Suit",
+        price: 300,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "Imagens/Amazônia.jpg",
+    },
+    {
+        id: "thyfhcbcv",
+        name: "Mens Suit",
+        price: 300,
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+        img: "Imagens/Amazônia.jpg",
+    },
 ];

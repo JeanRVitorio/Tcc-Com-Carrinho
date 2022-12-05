@@ -1,17 +1,14 @@
 let shop = document.getElementById("shop");
 
 /**
- * ! Basket to hold all the selected items
- * ? the getItem part is retrieving data from the local storage
- * ? if local storage is blank, basket becomes an empty array
- */
+--> Cesta para armazenar todos os itens selecionado a parte getItem está recuperando dados do armazenamento local se o armazenamento local estiver em branco, a cesta se tornará uma matriz vazia
+*/
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 /**
- * ! Generates the shop with product cards composed of
- * ! images, title, price, buttons, description
- */
+--> Gera a loja com fichas de produtos compostas por imagens, título, preço, botões, descrição
+*/
 
 let generateShop = () => {
     return (shop.innerHTML = shopItemsData
@@ -19,21 +16,21 @@ let generateShop = () => {
             let { id, name, desc, img, price } = x;
             let search = basket.find((y) => y.id === id) || [];
             return `
-    <div id=product-id-${id} class="item">
-      <img width="220" src=${img} alt="">
-      <div class="details">
-        <h3>${name}</h3>
-        <p>${desc}</p>
+    <div id=product-id-${id} class="item card">
+        <img width="220" src=${img} alt="">
+        <div class="details">
+            <h3>${name}</h3>
+            <p>${desc}</p>
         <div class="price-quantity">
-          <h2>$ ${price} </h2>
-          <div class="buttons">
-            <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+            <h2>R$ ${price} </h2>
+            <div class="buttons">
+                <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
             <div id=${id} class="quantity">${search.item === undefined ? 0 : search.item}</div>
             <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
-          </div>
+            </div>
+            </div>
         </div>
-      </div>
-  </div>
+    </div>
     `;
         })
         .join(""));
@@ -42,8 +39,8 @@ let generateShop = () => {
 generateShop();
 
 /**
- * ! used to increase the selected product item quantity by 1
- */
+--> Usado para aumentar a quantidade do item do produto selecionado em 1
+*/
 
 let increment = (id) => {
     let selectedItem = id;
@@ -64,8 +61,8 @@ let increment = (id) => {
 };
 
 /**
- * ! used to decrease the selected product item quantity by 1
- */
+--> Usado para diminuir a quantidade do item do produto selecionado em 1
+*/
 
 let decrement = (id) => {
     let selectedItem = id;
@@ -84,8 +81,8 @@ let decrement = (id) => {
 };
 
 /**
- * ! To update the digits of picked items on each item card
- */
+--> Para atualizar os dígitos dos itens selecionados em cada cartão de item
+*/
 
 let update = (id) => {
     let search = basket.find((x) => x.id === id);
@@ -94,8 +91,8 @@ let update = (id) => {
 };
 
 /**
- * ! To calculate total amount of selected Items
- */
+--> Para calcular a quantidade total de itens selecionados
+*/
 
 let calculation = () => {
     let cartIcon = document.getElementById("cartAmount");

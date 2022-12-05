@@ -2,16 +2,14 @@ let ShoppingCart = document.getElementById("shopping-cart");
 let label = document.getElementById("label");
 
 /**
- * ! Basket to hold all the selected items
- * ? the getItem part is retrieving data from the local storage
- * ? if local storage is blank, basket becomes an empty array
- */
+-->Basket to hold all the selected items - Cesta para armazenar todos os itens selecionados a parte getItem está recuperando dados do armazenamento local se o armazenamento local estiver em branco, a cesta se tornará uma matriz vazia
+*/
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 /**
- * ! To calculate total amount of selected Items
- */
+-->Para calcular a quantidade total de itens selecionados
+*/
 
 let calculation = () => {
     let cartIcon = document.getElementById("cartAmount");
@@ -21,10 +19,10 @@ let calculation = () => {
 calculation();
 
 /**
- * ! Generates the Cart Page with product cards composed of
- * ! images, title, price, buttons, & Total price
- * ? When basket is blank -> show's Cart is Empty
- */
+--> Gera a Página do Carrinho com cartões de produtos compostos por imagens, título, preço, botões e preço total
+
+Quando a cesta está em branco -> mostre que o carrinho está vazio
+*/
 
 let generateCartItems = () => {
     if (basket.length !== 0) {
@@ -34,40 +32,35 @@ let generateCartItems = () => {
                 let search = shopItemsData.find((x) => x.id === id) || [];
                 let { img, price, name } = search;
                 return `
-      <div class="cart-item">
-        <img width="100" src=${img} alt="" />
-
-        <div class="details">
-        
-          <div class="title-price-x">
-            <h4 class="title-price">
-              <p>${name}</p>
-              <p class="cart-item-price">$ ${price}</p>
-            </h4>
-            <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
-          </div>
-
-          <div class="cart-buttons">
-            <div class="buttons">
-              <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-              <div id=${id} class="quantity">${item}</div>
-              <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+        <div class="cart-item card">
+            <img width="100" src=${img} alt="" />
+            <div class="details">
+            <div class="title-price-x">
+                <h4 class="title-price">
+                <p>${name}</p>
+                <p class="cart-item-price">R$ ${price}</p>
+                </h4>
+                <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
             </div>
-          </div>
-
-          <h3>$ ${item * price}</h3>
-        
+            <div class="cart-buttons">
+            <div class="buttons">
+                <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+                <div id=${id} class="quantity">Quantidade: ${item}</div>
+                <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+            </div>
+            </div>
+            <h3>R$ ${item * price}</h3>
+            </div>
         </div>
-      </div>
-      `;
+        `;
             })
             .join(""));
     } else {
         ShoppingCart.innerHTML = "";
         label.innerHTML = `
-    <h2>Cart is Empty</h2>
+    <h2>Carrinho Vazio</h2>
     <a href="index.html">
-      <button class="HomeBtn">Back to Home</button>
+        <button class="HomeBtn">Voltar para Home</button>
     </a>
     `;
     }
@@ -76,8 +69,8 @@ let generateCartItems = () => {
 generateCartItems();
 
 /**
- * ! used to increase the selected product item quantity by 1
- */
+--> Usado para aumentar a quantidade do item do produto selecionado em 1
+*/
 
 let increment = (id) => {
     let selectedItem = id;
@@ -96,10 +89,10 @@ let increment = (id) => {
     update(selectedItem.id);
     localStorage.setItem("data", JSON.stringify(basket));
 };
-
+        
 /**
- * ! used to decrease the selected product item quantity by 1
- */
+--> Usado para diminuir a quantidade do item do produto selecionado em 1
+*/
 
 let decrement = (id) => {
     let selectedItem = id;
@@ -118,8 +111,9 @@ let decrement = (id) => {
 };
 
 /**
- * ! To update the digits of picked items on each item card
- */
+--> 
+Para atualizar os dígitos dos itens selecionados em cada cartão de item
+*/
 
 let update = (id) => {
     let search = basket.find((x) => x.id === id);
@@ -129,9 +123,8 @@ let update = (id) => {
 };
 
 /**
- * ! Used to remove 1 selected product card from basket
- * ! using the X [cross] button
- */
+-->Usado para remover 1 cartão de produto selecionado da cesta usando o botão X [cruz]
+*/
 
 let removeItem = (id) => {
     let selectedItem = id;
@@ -143,10 +136,9 @@ let removeItem = (id) => {
 };
 
 /**
- * ! Used to calculate total amount of the selected Products
- * ! with specific quantity
- * ? When basket is blank, it will show nothing
- */
+
+--> Usado para calcular a quantidade total dos produtos selecionados com quantidade específica Quando a cesta estiver em branco, não mostrará nada
+*/
 
 let TotalAmount = () => {
     if (basket.length !== 0) {
@@ -159,9 +151,9 @@ let TotalAmount = () => {
             .reduce((x, y) => x + y, 0);
 
         return (label.innerHTML = `
-    <h2>Total Bill : $ ${amount}</h2>
+    <h2>Total a Pagar : R$ ${amount}</h2>
     <button class="checkout">Checkout</button>
-    <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+    <button onclick="clearCart()" class="removeAll">Limpar Carrinho</button>
     `);
     } else return;
 };
@@ -169,8 +161,8 @@ let TotalAmount = () => {
 TotalAmount();
 
 /**
- * ! Used to clear cart, and remove everything from local storage
- */
+-->Usado para limpar o carrinho e remover tudo do armazenamento local
+*/
 
 let clearCart = () => {
     basket = [];
