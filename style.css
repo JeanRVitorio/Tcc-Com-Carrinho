@@ -2,6 +2,17 @@
 
 * {
     font-family: 'Cormorant Garamond', serif;
+    color: rgb(59, 54, 54);
+}
+
+body {
+  background-image:url("./Imagens/bannerlogo.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height:2000px;
+  background-attachment:fixed;
+  width: auto;
+  
 }
 
 /*---Primeira página---*/
@@ -37,8 +48,14 @@
     font-size: 35px;
 }
 
+.titulo {
+  margin-top: 3em;
+  
+}
+
 .texto__index {
-    padding: 1em 5em;
+    padding: 2em 5em;
+    
 }
 
 .banner__meio {
@@ -254,14 +271,8 @@
     }
   }
   
-  .item {
-    border: 2px solid #212529;
-    border-radius: 4px;
-  }
-  .item img {
-    width: 100%;
-    border-radius: 2px 2px 0 0;
-  }
+ 
+ 
   
   .details {
     display: flex;

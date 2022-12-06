@@ -10,67 +10,79 @@
     <link rel="icon" type="image/x-icon" href="./Imagens/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Pacifico&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
+
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <!--bg-light  -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <!--<a class="navbar-brand" href="">NorthField</a>-->
-                <img src="./imagens/logohorizontal.png" class="navbar-brand logo_imagem">
-            
+                <img src="./imagens/logonovo1.jpg" class="navbar-brand logo_imagem">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav nav__bar">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link drop down-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Produtos
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="masc.html">Masculinas</a></li>
-                                <li><a class="dropdown-item" href="fem.html">Femininas</a></li>
+                                <li><a class="dropdown-item " href="masc.html">Masculinas</a></li>
+                                <li><a class="dropdown-item " href="fem.html">Femininas</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link drop down-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Sobre Nós
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="qmsomos.html">Quem Somos</a></li>
-                                <li><a class="dropdown-item" href="sobrenos.html">Sobre Nossos Produtos</a></li>
-                                <li><a class="dropdown-item" href="trabalhe.html">Trabalhe Conosco</a></li>
+                                <li><a class="dropdown-item " href="qmsomos.html">Quem Somos</a></li>
+                                <li><a class="dropdown-item " href="sobrenos.html">Sobre Nossos Produtos</a></li>
+                                <li><a class="dropdown-item " href="trabalhe.html">Trabalhe Conosco</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link drop down-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Minha Conta
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Cadastre-se</a></li>
-                                <li><a class="dropdown-item" href="#">Login</a></li>
+                                <li><a class="dropdown-item " href="cadastro.html">Cadastre-se</a></li>
+                                <li><a class="dropdown-item " href="#">Login</a></li>
                             </ul>
                         </li>
                     </ul>
+                    <a href="carrinho.html">
+                        <div class="cart">
+                          <i class="bi bi-cart2"></i>
+                          <div id="cartAmount" class="cartAmount">0</div>
+                        </div>
+                      </a>
+                   
                 </div>
             </div>
         </nav>
     </header>
 
-    <section>
-        <div class="produtos-float">
-            <!--cards dinâmicos-->
-        </div>
+    <section class="titulo">
+        <h2 class="text-center pt-5">Destaques</h2>
+        <div class="shop" id="shop">
+                <!--cards dinâmicos-->
+            </div>
     </section>
 
     <footer class="bd-footer py-4 py-md-5 mt-5 bg-secondary bg-gradient">
@@ -126,12 +138,13 @@
         </div>
     </footer>
 
-    <script src="scriptfem.js"></script>
+
+    <script src="Datafem1.js"></script>
+    <script src="scriptprinc.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-    crossorigin="anonymous"></script>
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
 </body>
-</html>

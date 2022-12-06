@@ -1,0 +1,88 @@
+let shopItemsData = [
+    {
+        id: "vuhhfsgfssf",
+        name: "camisa social azul",
+        price: 45,
+        desc: "ser chic é se sustentavel",
+        img: "roupasfem/fem1.jpg",
+    },
+    {
+        id: "mnkjhbhf",
+        name: "camisa social preta",
+        price: 100,
+        desc: "nossa roupa tras uma paz",
+        img: "roupasfem/fem2.png",
+    },
+    {
+        id: "nbvhvgcdfx",
+        name: "camisa social branca",
+        price: 25,
+        desc: "seja sustentavel, seja chic!",
+        img: "roupasfem/fem3.png",
+    },
+    {
+        id: "gfdsrxkjnhb",
+        name: "camisa social rosa",
+        price: 200,
+        desc: "seja sustentavel ",
+        img: "roupasfem/fem4.jpg",
+    },
+    {
+        id: "abc",
+        name: "calça verde clara",
+        price: 249,
+        desc: "seja Northfield",
+        img: "roupasfem/fem6.jpg",
+    },
+    {
+        id: "def",
+        name: "calça verde escuro",
+        price: 70,
+        desc: "seja perfeita",
+        img: "roupasfem/fem7.jpg",
+    },
+    {
+        id: "ghi",
+        name: "calça rosa",
+        price: 80,
+        desc: "seja linda ",
+        img: "roupasfem/fem10.jpg",
+    },
+    {
+        id: "ggfhgjhg",
+        name:"comjunto",
+        price: 50,
+        desc: "seja incrivel",
+        img: "roupasfem/fem11.jpg",
+    },
+    
+    {
+        id: "lnkjhjjhbb",
+        name: "calça escura",
+        price: 45,
+        desc: "seja a melhor ",
+        img: "roupasfem/fem12.jpg",
+    },
+    {
+        id: "kjhbkjbh",
+        name: "calça rosa",
+        price: 100,
+        desc: "seja voce mesma ",
+        img: "roupasfem/fem.13.jpg",
+    },
+    {
+        id: "kjhbkj",
+        name: "vestido curto",
+        price: 200,
+        desc: " voce é northfield",
+        img: "roupasfem/fem14.jpg",
+    },
+    {
+        id: "kjhuifgytd",
+        name: "vestido curto",
+        price: 250,
+        desc: "voce é a melhor",
+        img: "roupasfem/fem15.jpg",
+    },
+
+];
